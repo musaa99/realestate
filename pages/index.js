@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import axios from 'axios';
 import {useState} from 'react';
 export default function Home() {
@@ -23,9 +26,11 @@ export default function Home() {
 	};
 	return (
 		<div className="flex flex-col md:px-12 px-0 relative bg-background font-poppins items-center min-h-screen">
-			<h1 className="text-6xl text-primary font-bold mt-20">
+			{/* <h1 className=" header text-6xl text-primary font-bold mt-20"> */}
+			<h1 className=" header">
 				Real Estate <span className="text-active">App</span>
 			</h1>
+			<h1 className='header'>hello</h1>
 			<h2 className="text-active text-2xl mt-6">
 				Discover latest properties for sale anywhere in USA.
 			</h2>
@@ -65,6 +70,7 @@ export default function Home() {
 								'open_house_date',
 								'photos'
 							].map(value => {
+								// eslint-disable-next-line react/jsx-key
 								return <option value={value}>{value}</option>;
 							})}
 						</select>
@@ -96,7 +102,10 @@ export default function Home() {
 								<div className="flow-root bg-light rounded-lg px-4 pb-8">
 									<div className="-mt-6">
 										<div className="flex items-center justify-center">
+											// eslint-disable-next-line react/jsx-no-comment-textnodes
 											<span className="p-2">
+												// eslint-disable-next-line @next/next/no-img-element
+												// eslint-disable-next-line jsx-a11y/alt-text
 												<img
 													src={property.photo}
 													className="w-full h-full rounded-lg"
